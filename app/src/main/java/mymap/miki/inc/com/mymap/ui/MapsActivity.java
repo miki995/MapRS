@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -84,6 +85,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             public void onClick(View v) {
                 if (mapReady)
                     mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+                updateButtons(btnMap,btnSatellite,btnSatellite);
 
             }
         });
@@ -93,6 +95,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             public void onClick(View v) {
                 if (mapReady)
                     mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+                updateButtons(btnSatellite,btnMap,btnHybrid);
             }
         });
 
@@ -101,6 +104,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             public void onClick(View v) {
                 if (mapReady)
                     mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+                updateButtons(btnHybrid,btnMap,btnSatellite);
             }
         });
 
@@ -306,5 +310,13 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 return v;
             }
         });
+    }
+    public void updateButtons(ImageButton firstButton, ImageButton secButton, ImageButton thirdButton)
+    {
+        int primaryColor = getResources().getColor(R.color.buttonColor);
+        int secColor = getResources().getColor(R.color.gray);
+        firstButton.setBackgroundColor(primaryColor);
+        secButton.setBackgroundColor(secColor);
+        thirdButton.setBackgroundColor(secColor);
     }
 }
