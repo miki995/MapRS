@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ListPreference
+        android:defaultValue="43.50773,18.77499"
+        android:summary="%s"
+        android:entries="@array/list_cities"
+        android:entryValues="@array/list_cities_gps"
+        android:key="@string/city"
+        android:title="@string/city_label" />
+
+
+</PreferenceScreen>

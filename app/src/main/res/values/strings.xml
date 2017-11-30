@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MapRS</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="action_settings">Settings</string>
+    <string name="warning">Molimo izaberite od ponudjenog?</string>
+    <string name="choose_city">Izaberi grad</string>
+    <string name="city" translatable="false">city</string>
+    <string name="city_label">Grad</string>
+    <string name="title_activity_settings">Podesavanja</string>
+</resources>

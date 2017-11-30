@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="places">
+        <item>Računovodstvo</item>
+        <item>ATM</item>
+        <item>Pekara</item>
+        <item>Banka</item>
+        <item>Bar</item>
+        <item>Autobuska stanica</item>
+        <item>Kafić</item>
+        <item>Auto servis</item>
+        <item>Autopraonica</item>
+        <item>Crkva</item>
+        <item>Butik</item>
+        <item>Prodavnica elektronike</item>
+        <item>Benzinska pumpa</item>
+        <item>Market</item>
+        <item>Teretana</item>
+        <item>Robna kuća</item>
+        <item>Bolnica</item>
+        <item>Agencija za osiguranje</item>
+        <item>Gradska uprava</item>
+        <item>Prenoćište</item>
+        <item>Muzej</item>
+        <item>Noćni klub</item>
+        <item>Park</item>
+        <item>Parking</item>
+        <item>Apoteka</item>
+        <item>Policijska stanica</item>
+        <item>Pošta</item>
+        <item>Restoran</item>
+        <item>Škola</item>
+        <item>Prodavnica obuće</item>
+        <item>Trgovački centar</item>
+        <item>Sportski stadion</item>
+        <item>Prodavnica</item>
+        <item>Turistička agencija</item>
+        <item>Fakultet</item>
+        <item>Veterinarska ambulanta</item>
+    </string-array>
+
+    <string-array name="places_values">
+        <item>accounting</item>
+        <item>atm</item>
+        <item>bakery</item>
+        <item>bank</item>
+        <item>bar</item>
+        <item>bus_station</item>
+        <item>cafe</item>
+        <item>car_repair</item>
+        <item>car_wash</item>
+        <item>church</item>
+        <item>clothing_store</item>
+        <item>electronics_store</item>
+        <item>gas_station</item>
+        <item>grocery_or_supermarket</item>
+        <item>gym</item>
+        <item>home_goods_store</item>
+        <item>hospital</item>
+        <item>insurance_agency</item>
+        <item>local_government_office</item>
+        <item>lodging</item>
+        <item>museum</item>
+        <item>night_club</item>
+        <item>park</item>
+        <item>parking</item>
+        <item>pharmacy</item>
+        <item>police</item>
+        <item>post_office</item>
+        <item>restaurant</item>
+        <item>school</item>
+        <item>shoe_store</item>
+        <item>shopping_mall</item>
+        <item>stadium</item>
+        <item>store</item>
+        <item>travel_agency</item>
+        <item>university</item>
+        <item>veterinary_care</item>
+    </string-array>
+
+
+</resources>

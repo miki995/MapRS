@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <array name="list_cities">
+        <item>Foča</item>
+        <item>Banja Luka</item>
+        <item>Berkovici</item>
+        <item>Bijeljina</item>
+        <item>Bileca</item>
+        <item>Bratunac</item>
+        <item>Gacko</item>
+        <item>Gradiška</item>
+        <item>Kozarska Dubica</item>
+        <item>Bosanska Gradiška</item>
+        <item>Bosanski Brod</item>
+        <item>Derventa</item>
+        <item>Doboj</item>
+        <item>Istocno Sarajevo</item>
+        <item>Kalinovik</item>
+        <item>Laktaši</item>
+        <item>Ljubinje</item>
+        <item>Modriča</item>
+        <item>Nevesinje</item>
+        <item>Petrovo</item>
+        <item>Milići</item>
+        <item>Mrkonjić Grad</item>
+        <item>Pale</item>
+        <item>Prijedor</item>
+        <item>Rogatica</item>
+        <item>Rudo</item>
+        <item>Šipovo</item>
+        <item>Sokolac</item>
+        <item>Srebrenica</item>
+        <item>Trebinje</item>
+        <item>Teslić</item>
+        <item>Višegrad</item>
+        <item>Zvornik</item>
+        <item>Čajniče</item>
+    </array>
+
+    <array name="list_cities_gps">
+        <item>43.50773,18.77499</item>
+        <item>44.766667,17.183333</item>
+        <item>43.116667,18.066667</item>
+        <item>44.75,19.216667</item>
+        <item>42.87645,18.42967</item>
+        <item>44.11,19.2</item>
+        <item>43.166476,18.535235</item>
+        <item>45.183333,16.8</item>
+        <item>45.14,17.25</item>
+        <item>45.14484,17.25453</item>
+        <item>45.13747,17.98722</item>
+        <item>44.97839,17.90779</item>
+        <item>44.73,18.09</item>
+        <item>43.816667,18.35</item>
+        <item>43.51,18.45</item>
+        <item>44.9,17.3</item>
+        <item>42.951222,18.087278</item>
+        <item>44.956667,18.315</item>
+        <item>43.266667,18.116667</item>
+        <item>44.633333,18.366667</item>
+        <item>44.17016,19.09195</item>
+        <item>44.41729,17.08288</item>
+        <item>43.814517,18.5727</item>
+        <item>44.981667,16.720556</item>
+        <item>43.799403,19.001623</item>
+        <item>43.616667,19.366667</item>
+        <item>44.28237,17.08597</item>
+        <item>43.937222,18.798333</item>
+        <item>44.1,19.3</item>
+        <item>42.711,18.34555</item>
+        <item>44.606667,17.86</item>
+        <item>43.782778,19.291111</item>
+        <item>44.383333,19.1</item>
+        <item>43.557186,19.071694</item>
+    </array>
+</resources>
