@@ -115,11 +115,12 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     protected void onResume() {
         super.onResume();
         city = getCity();
+        int currentSpinnerPosition = places_spinner.getSelectedItemPosition();
         if (mapReady) {
             mMap.clear();
             flyTo(city);
             new GetPlaces(MapsActivity.this,
-                    places[0].toLowerCase().replace("-", "_")
+                    places[currentSpinnerPosition].toLowerCase().replace("-", "_")
             ).execute();
         }
     }
