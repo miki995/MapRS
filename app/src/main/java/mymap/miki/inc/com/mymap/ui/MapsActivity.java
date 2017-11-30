@@ -262,6 +262,9 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                     .build();
 
         } else {
+            SharedPreferences.Editor editor = this.getSharedPreferences(pref_key, Context.MODE_PRIVATE).edit();
+            editor.putString(pref_key, "43.50773, 18.77499");
+            editor.apply();
             city = CameraPosition.builder()
                     .target(new LatLng(43.50773, 18.77499))
                     .zoom(15)
