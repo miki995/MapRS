@@ -7,14 +7,12 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.preference.PreferenceManager;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -34,9 +32,9 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import mymap.miki.inc.com.mymap.R;
 import mymap.miki.inc.com.mymap.Utils.Place;
 import mymap.miki.inc.com.mymap.Utils.PlacesService;
-import mymap.miki.inc.com.mymap.R;
 
 public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback, AdapterView.OnItemSelectedListener {
 
@@ -251,9 +249,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         String pref_key = getResources().getString(R.string.city);
         SharedPreferences prefs = getApplicationContext().getSharedPreferences(pref_key, Context.MODE_PRIVATE);
 
-
         String value = prefs.getString(pref_key, null);
-
 
         if (value != null) {
             String[] split = value.split(",");
@@ -313,8 +309,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     }
     public void updateButtons(ImageButton firstButton, ImageButton secButton, ImageButton thirdButton)
     {
-        int primaryColor = getResources().getColor(R.color.buttonColor);
-        int secColor = getResources().getColor(R.color.gray);
+        int primaryColor = getResources().getColor(R.color.colorPrimaryDark);
+        int secColor = getResources().getColor(R.color.colorGray);
         firstButton.setBackgroundColor(primaryColor);
         secButton.setBackgroundColor(secColor);
         thirdButton.setBackgroundColor(secColor);

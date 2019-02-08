@@ -4,14 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ListPreference
+        android:key="@string/country"
+        android:summary="%s"
+        android:title="@string/country_label" />
 
     <ListPreference
-        android:defaultValue="43.50773,18.77499"
-        android:summary="%s"
-        android:entries="@array/list_cities"
-        android:entryValues="@array/list_cities_gps"
         android:key="@string/city"
+        android:summary="%s"
         android:title="@string/city_label" />
-
 
 </PreferenceScreen>

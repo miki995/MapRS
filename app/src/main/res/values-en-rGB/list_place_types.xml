@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="places">
+        <item>Accounting</item>
+        <item>ATM</item>
+        <item>Bakery</item>
+        <item>Bank</item>
+        <item>Bar</item>
+        <item>Bus station</item>
+        <item>Cafe</item>
+        <item>Car repair</item>
+        <item>Car wash</item>
+        <item>Church</item>
+        <item>Clothing store</item>
+        <item>Electronics store</item>
+        <item>Gas station</item>
+        <item>Market</item>
+        <item>Gym</item>
+        <item>Home goods store</item>
+        <item>Hospital</item>
+        <item>Insurance agency</item>
+        <item>Local government office</item>
+        <item>Lodging</item>
+        <item>Museum</item>
+        <item>Night club</item>
+        <item>Park</item>
+        <item>Parking</item>
+        <item>Pharmacy</item>
+        <item>Police</item>
+        <item>Post office</item>
+        <item>Restaurant</item>
+        <item>School</item>
+        <item>Shoe store</item>
+        <item>Shopping mall</item>
+        <item>Stadium</item>
+        <item>Store</item>
+        <item>Turistic agency</item>
+        <item>Faculty</item>
+        <item>Veterinary ambulant</item>
+    </string-array>
+
+    <string-array name="places_values">
+        <item>accounting</item>
+        <item>atm</item>
+        <item>bakery</item>
+        <item>bank</item>
+        <item>bar</item>
+        <item>bus_station</item>
+        <item>cafe</item>
+        <item>car_repair</item>
+        <item>car_wash</item>
+        <item>church</item>
+        <item>clothing_store</item>
+        <item>electronics_store</item>
+        <item>gas_station</item>
+        <item>grocery_or_supermarket</item>
+        <item>gym</item>
+        <item>home_goods_store</item>
+        <item>hospital</item>
+        <item>insurance_agency</item>
+        <item>local_government_office</item>
+        <item>lodging</item>
+        <item>museum</item>
+        <item>night_club</item>
+        <item>park</item>
+        <item>parking</item>
+        <item>pharmacy</item>
+        <item>police</item>
+        <item>post_office</item>
+        <item>restaurant</item>
+        <item>school</item>
+        <item>shoe_store</item>
+        <item>shopping_mall</item>
+        <item>stadium</item>
+        <item>store</item>
+        <item>travel_agency</item>
+        <item>university</item>
+        <item>veterinary_care</item>
+    </string-array>
+</resources>
