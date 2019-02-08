@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MapRS</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="action_settings">Settings</string>
+    <string name="warning">Please, choose from the list.</string>
+    <string name="choose_city">Choose</string>
+    <string name="choose_country">Choose country</string>
+    <string name="city_label">City</string>
+    <string name="country_label">Country</string>
+</resources>
