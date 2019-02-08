@@ -2,6 +2,7 @@ package mymap.miki.inc.com.mymap.ui;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
@@ -17,7 +18,7 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.Objects;
+import java.util.Arrays;
 
 import mymap.miki.inc.com.mymap.R;
 
@@ -46,14 +47,33 @@ public class SettingsFragment extends PreferenceFragmentCompat
         // register the preference change listener
         getPreferenceScreen().getSharedPreferences()
                 .registerOnSharedPreferenceChangeListener(this);
+        new CollectAllCountriesAndCities().execute("");
+    }
 
-        loadCountries();
+    private class CollectAllCountriesAndCities extends AsyncTask<String, Void, String> {
+
+        @Override
+        protected String doInBackground(String... params) {
+            loadCountries();
+            return "Executed";
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+        }
+
+        @Override
+        protected void onPreExecute() {
+        }
+
+        @Override
+        protected void onProgressUpdate(Void... values) {
+        }
     }
 
     private void loadCities(String countryCode) {
         ArrayList<String> entries = new ArrayList<>();
         ArrayList<String> entryValues = new ArrayList<>();
-
         try {
             JSONArray jsonArray = new JSONArray(loadJSONFromAsset("countryCities.json"));
             for (int i = 0; i < jsonArray.length(); ++i) {
@@ -66,7 +86,6 @@ public class SettingsFragment extends PreferenceFragmentCompat
         } catch (JSONException e) {
             Log.i("TAG", "Improper JSON string");
         }
-
         ListPreference listPreference = (ListPreference) findPreference(getString(R.string.city));
         listPreference.setEntries(entries.toArray(new String[entries.size()]));
         listPreference.setEntryValues(entryValues.toArray(new String[entryValues.size()]));
@@ -76,7 +95,6 @@ public class SettingsFragment extends PreferenceFragmentCompat
     private void loadCountries() {
         ArrayList<String> entries = new ArrayList<>();
         ArrayList<String> entryValues = new ArrayList<>();
-
         try {
             JSONObject json = new JSONObject(loadJSONFromAsset("countries.json"));
             JSONArray jsonArray = json.getJSONArray("countries");
@@ -88,17 +106,16 @@ public class SettingsFragment extends PreferenceFragmentCompat
         } catch (JSONException e) {
             Log.i("TAG", "Improper JSON string");
         }
-
         ListPreference listPreference = (ListPreference) findPreference(getString(R.string.country));
         listPreference.setEntries(entries.toArray(new String[entries.size()]));
         listPreference.setEntryValues(entryValues.toArray(new String[entryValues.size()]));
         listPreference.setValueIndex(0);
+
         loadCities(entryValues.get(0));
     }
 
     private String loadJSONFromAsset(String filename) {
         String json = null;
-
         try {
             InputStream is = this.getResources().getAssets().open(filename);
             int size = is.available();
@@ -110,7 +127,6 @@ public class SettingsFragment extends PreferenceFragmentCompat
             ex.printStackTrace();
             return null;
         }
-
         return json;
     }
 
@@ -118,7 +134,6 @@ public class SettingsFragment extends PreferenceFragmentCompat
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
         if (key.equals(getString(R.string.city))) {
-
             SharedPreferences.Editor editor = getActivity().getSharedPreferences(key, Context.MODE_PRIVATE).edit();
             Preference preference = findPreference(key);
             String citySummary = preference.getKey();
@@ -126,15 +141,12 @@ public class SettingsFragment extends PreferenceFragmentCompat
             String value = listPreference.getValue();
             editor.putString(key, value);
             editor.apply();
-
             int prefIndex = listPreference.findIndexOfValue(citySummary);
-
             if (prefIndex >= 0) {
                 listPreference.setSummary(listPreference.getEntries()[prefIndex]);
             }
         }
         if (key.equals(getString(R.string.country))) {
-
             SharedPreferences.Editor editor = getActivity().getSharedPreferences(key, Context.MODE_PRIVATE).edit();
             Preference preference = findPreference(key);
             String countrySummary = preference.getKey();
@@ -142,13 +154,10 @@ public class SettingsFragment extends PreferenceFragmentCompat
             String value = listPreference.getValue();
             editor.putString(key, value);
             editor.apply();
-
             int prefIndex = listPreference.findIndexOfValue(countrySummary);
-
             if (prefIndex >= 0) {
                 listPreference.setSummary(listPreference.getEntries()[prefIndex]);
             }
-
             loadCities(value);
         }
     }
